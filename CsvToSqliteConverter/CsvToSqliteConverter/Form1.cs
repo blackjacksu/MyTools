@@ -163,6 +163,9 @@ new System.IO.StreamReader(@"D:\DailyMission\VmaAlertDescription\AlertDescriptio
                     {
                         //CatLog.WarnException(sqliteCommand.CommandText, ex);
                     }
+
+
+
                 }
             }
 
