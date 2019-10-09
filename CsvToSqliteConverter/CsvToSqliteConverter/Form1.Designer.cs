@@ -48,9 +48,9 @@
             // 
             // Write
             // 
-            this.Write.Location = new System.Drawing.Point(418, 58);
+            this.Write.Location = new System.Drawing.Point(51, 406);
             this.Write.Name = "Write";
-            this.Write.Size = new System.Drawing.Size(83, 47);
+            this.Write.Size = new System.Drawing.Size(111, 65);
             this.Write.TabIndex = 0;
             this.Write.Text = "Convert";
             this.Write.UseVisualStyleBackColor = true;
@@ -58,18 +58,18 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(418, 237);
+            this.button2.Location = new System.Drawing.Point(317, 406);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(86, 65);
             this.button2.TabIndex = 1;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // CompareDifference
             // 
-            this.CompareDifference.Location = new System.Drawing.Point(418, 134);
+            this.CompareDifference.Location = new System.Drawing.Point(174, 406);
             this.CompareDifference.Name = "CompareDifference";
-            this.CompareDifference.Size = new System.Drawing.Size(117, 65);
+            this.CompareDifference.Size = new System.Drawing.Size(107, 65);
             this.CompareDifference.TabIndex = 2;
             this.CompareDifference.Text = "Compare";
             this.CompareDifference.UseVisualStyleBackColor = true;
@@ -79,12 +79,12 @@
             // 
             this.filePathCsv.Location = new System.Drawing.Point(51, 67);
             this.filePathCsv.Name = "filePathCsv";
-            this.filePathCsv.Size = new System.Drawing.Size(129, 29);
+            this.filePathCsv.Size = new System.Drawing.Size(352, 29);
             this.filePathCsv.TabIndex = 3;
             // 
             // BrowseYourCsv
             // 
-            this.BrowseYourCsv.Location = new System.Drawing.Point(216, 58);
+            this.BrowseYourCsv.Location = new System.Drawing.Point(51, 102);
             this.BrowseYourCsv.Name = "BrowseYourCsv";
             this.BrowseYourCsv.Size = new System.Drawing.Size(119, 42);
             this.BrowseYourCsv.TabIndex = 4;
@@ -114,18 +114,18 @@
             // 
             this.filePath_Db.Location = new System.Drawing.Point(51, 219);
             this.filePath_Db.Name = "filePath_Db";
-            this.filePath_Db.Size = new System.Drawing.Size(129, 29);
+            this.filePath_Db.Size = new System.Drawing.Size(352, 29);
             this.filePath_Db.TabIndex = 7;
             // 
             // BrowsYourDB
             // 
-            this.BrowsYourDB.Location = new System.Drawing.Point(224, 206);
+            this.BrowsYourDB.Location = new System.Drawing.Point(51, 254);
             this.BrowsYourDB.Name = "BrowsYourDB";
             this.BrowsYourDB.Size = new System.Drawing.Size(111, 42);
             this.BrowsYourDB.TabIndex = 8;
             this.BrowsYourDB.Text = "Browse";
             this.BrowsYourDB.UseVisualStyleBackColor = true;
-            this.BrowsYourDB.Click += new System.EventHandler(this.BrowsYourDB_Click);
+            this.BrowsYourDB.Click += new System.EventHandler(this.BrowseYourDB_Click);
             // 
             // openFileDialog1
             // 
@@ -157,7 +157,7 @@
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Not Found";
+            this.Column3.HeaderText = "Not Found In";
             this.Column3.Name = "Column3";
             // 
             // Form1
@@ -196,10 +196,10 @@
         private System.Windows.Forms.Button BrowsYourDB;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 

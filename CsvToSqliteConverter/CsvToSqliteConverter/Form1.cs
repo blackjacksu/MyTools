@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -20,6 +21,16 @@ namespace CsvToSqliteConverter
         SaveFileDialog FileToSave = new SaveFileDialog();
 
 
+        private class AlertMsg
+        {
+            public string Uid = "--";
+            public int Severity = -1;
+            public string Category = "--";
+            public string ErrorCode = "--";
+            public string Description_EN = "Unknown error";
+            public string Description_ZH = "Unknown error";
+            public bool IsSelfTestable = false;
+        }
 
         public Form1()
         {
@@ -73,7 +84,7 @@ new System.IO.StreamReader(@"D:\DailyMission\VmaAlertDescription\AlertDescriptio
             Console.WriteLine(result); // <-- For debugging use
         }
 
-        private void BrowsYourDB_Click(object sender, EventArgs e)
+        private void BrowseYourDB_Click(object sender, EventArgs e)
         {
             int size = -1;
             DialogResult result = FileToOpen.ShowDialog(); // Show the dialog.
@@ -101,7 +112,6 @@ new System.IO.StreamReader(@"D:\DailyMission\VmaAlertDescription\AlertDescriptio
             bool ret = false;
             string[] words = targetString.Split(',');
             //Parse "Slot5", "010000000" out
-            
 
 
             //Extract IsSelfTestable
@@ -117,6 +127,50 @@ new System.IO.StreamReader(@"D:\DailyMission\VmaAlertDescription\AlertDescriptio
         private void CompareDifference_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private AlertMsg GetAlertDescription(string uid)
+        {
+            AlertMsg ret = new AlertMsg();
+            var fileName = filePath_Db.Text;
+            if (!File.Exists(fileName))
+            {
+                //CatLog.Warn("sqlite file missing, path: " + EngModeConstants.LocalDbPath);
+                return ret;
+            }
+
+            using (SQLiteConnection sqliteConn = new SQLiteConnection("Data source=" + fileName))
+            {
+                sqliteConn.Open();
+                using (var sqliteCommand = sqliteConn.CreateCommand())
+                {
+                    sqliteCommand.CommandText = "SELECT * FROM vmalertinfo WHERE \"UID\" = '" + uid + "'";
+                    try
+                    {
+                        using (SQLiteDataReader sqlite_datareader = sqliteCommand.ExecuteReader())
+                        {
+                            sqlite_datareader.Read();
+                            ret.Severity = Convert.ToInt32(sqlite_datareader["Severity"]);
+                            ret.Category = sqlite_datareader["Category"].ToString();
+                            ret.ErrorCode = sqlite_datareader["Error Code"].ToString();
+                            ret.Description_EN = sqlite_datareader["EN Description"].ToString();
+                            ret.Description_ZH = sqlite_datareader["ZH-TW Description"].ToString();
+                            ret.IsSelfTestable = sqlite_datareader["IsSelfTestable"].ToString() == "1" ? true : false;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        //CatLog.WarnException(sqliteCommand.CommandText, ex);
+                    }
+                }
+            }
+
+
+
+
+
+            return ret;
         }
     }
 }
