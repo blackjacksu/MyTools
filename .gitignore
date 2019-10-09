@@ -1,2 +1,6 @@
 
 CsvToSqliteConverter/packages/
+
+CsvToSqliteConverter/CsvToSqliteConverter/obj/
+
+CsvToSqliteConverter/.vs/
