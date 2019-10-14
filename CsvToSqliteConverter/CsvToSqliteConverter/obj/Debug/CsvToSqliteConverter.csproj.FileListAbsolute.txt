@@ -30,7 +30,6 @@ D:\DailyMission\Tools\MyTools\CsvToSqliteConverter\CsvToSqliteConverter\bin\Debu
 D:\DailyMission\Tools\MyTools\CsvToSqliteConverter\CsvToSqliteConverter\bin\Debug\EntityFramework.SqlServer.xml
 D:\DailyMission\Tools\MyTools\CsvToSqliteConverter\CsvToSqliteConverter\bin\Debug\System.Data.SQLite.xml
 D:\DailyMission\Tools\MyTools\CsvToSqliteConverter\CsvToSqliteConverter\bin\Debug\System.Data.SQLite.dll.config
-D:\DailyMission\Tools\MyTools\CsvToSqliteConverter\CsvToSqliteConverter\obj\Debug\CsvToSqliteConverter.csprojAssemblyReference.cache
 D:\DailyMission\Tools\MyTools\CsvToSqliteConverter\CsvToSqliteConverter\obj\Debug\CsvToSqliteConverter.Form1.resources
 D:\DailyMission\Tools\MyTools\CsvToSqliteConverter\CsvToSqliteConverter\obj\Debug\CsvToSqliteConverter.Properties.Resources.resources
 D:\DailyMission\Tools\MyTools\CsvToSqliteConverter\CsvToSqliteConverter\obj\Debug\CsvToSqliteConverter.csproj.GenerateResource.cache
