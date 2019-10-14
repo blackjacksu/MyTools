@@ -181,7 +181,7 @@ new System.IO.StreamReader(@"D:\DailyMission\VmaAlertDescription\AlertDescriptio
                 }
                 else
                 {
-                    if (csvAlert.Description_EN != alert.Description_EN || csvAlert.Description_ZH != alert.Description_ZH)
+                    if (csvAlert.Description_EN != alert.Description_EN)// || csvAlert.Description_ZH != alert.Description_ZH)
                     {
                         // Description not match
 

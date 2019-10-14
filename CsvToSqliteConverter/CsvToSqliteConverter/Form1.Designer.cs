@@ -39,16 +39,16 @@
             this.BrowsYourDB = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.DifferenceDetailGrid = new System.Windows.Forms.DataGridView();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LineCountText = new System.Windows.Forms.TextBox();
             this.RowCountText = new System.Windows.Forms.TextBox();
             this.Results = new System.Windows.Forms.ListBox();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DifferenceDetailGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,28 +152,8 @@
             this.DifferenceDetailGrid.Name = "DifferenceDetailGrid";
             this.DifferenceDetailGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.DifferenceDetailGrid.RowTemplate.Height = 31;
-            this.DifferenceDetailGrid.Size = new System.Drawing.Size(628, 247);
+            this.DifferenceDetailGrid.Size = new System.Drawing.Size(704, 283);
             this.DifferenceDetailGrid.TabIndex = 9;
-            // 
-            // Category
-            // 
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "UID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Diffence Col";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Not Found In";
-            this.Column3.Name = "Column3";
             // 
             // label1
             // 
@@ -211,10 +191,30 @@
             // 
             this.Results.FormattingEnabled = true;
             this.Results.ItemHeight = 18;
-            this.Results.Location = new System.Drawing.Point(648, 386);
+            this.Results.Location = new System.Drawing.Point(598, 374);
             this.Results.Name = "Results";
-            this.Results.Size = new System.Drawing.Size(657, 130);
+            this.Results.Size = new System.Drawing.Size(783, 202);
             this.Results.TabIndex = 14;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Not Found In";
+            this.Column3.Name = "Column3";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Diffence Col";
+            this.Column2.Name = "Column2";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "UID";
+            this.Column1.Name = "Column1";
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
             // 
             // Form1
             // 
